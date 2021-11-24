@@ -2,24 +2,19 @@
 
 #set -e at the top of your script will make the script exit with an error whenever an error occurs (and is not explicitly handled)
 set -eu
-set -x
-
 
 TEMP_SSH_PRIVATE_KEY_FILE='../id_rsa_github'
 TEMP_SFTP_FILE='../sftp'
 
 echo 'preparing files...'
 # keep string format
-printf "%s" "$4"
-printf "%s" "$4" >$TEMP_SSH_PRIVATE_KEY_FILE
+printf "%s" "${4}" >$TEMP_SSH_PRIVATE_KEY_FILE
 # avoid Permissions too open
 chmod 600 $TEMP_SSH_PRIVATE_KEY_FILE
 
-stat $TEMP_SSH_PRIVATE_KEY_FILE
-
 echo 'ssh start'
 
-ssh -o StrictHostKeyChecking=no -p $3 -i $TEMP_SSH_PRIVATE_KEY_FILE $1@$2 mkdir -p $6
+ssh -o StrictHostKeyChecking=no -p ${3} -i ${TEMP_SSH_PRIVATE_KEY_FILE} $1@$2 mkdir -p $6
 
 echo 'dashk1n: sftp start'
 # create a temporary file containing sftp commands

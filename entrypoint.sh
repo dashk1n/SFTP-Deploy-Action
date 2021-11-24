@@ -7,15 +7,14 @@ set -eu
 TEMP_SSH_PRIVATE_KEY_FILE='../id_rsa_github'
 TEMP_SFTP_FILE='../sftp'
 
+echo 'preparing files...'
 # keep string format
+printf "%s" "$4"
 printf "%s" "$4" >$TEMP_SSH_PRIVATE_KEY_FILE
 # avoid Permissions too open
 chmod 600 $TEMP_SSH_PRIVATE_KEY_FILE
 
 echo 'ssh start'
-head -2 $TEMP_SSH_PRIVATE_KEY_FILE
-echo '....'
-tail -2 $TEMP_SSH_PRIVATE_KEY_FILE
 
 ssh -o StrictHostKeyChecking=no -p $3 -i $TEMP_SSH_PRIVATE_KEY_FILE $1@$2 mkdir -p $6
 

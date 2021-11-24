@@ -16,7 +16,7 @@ echo 'ssh start'
 
 ssh -o StrictHostKeyChecking=no -p $3 -i $TEMP_SSH_PRIVATE_KEY_FILE $1@$2 mkdir -p $6
 
-echo 'sftp start'
+echo 'dashk1n: sftp start'
 # create a temporary file containing sftp commands
 printf "%s" "put -r $5 $6" >$TEMP_SFTP_FILE
 #-o StrictHostKeyChecking=no avoid Host key verification failed.

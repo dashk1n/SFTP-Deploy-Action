@@ -4,7 +4,7 @@
 set -eu
 
 
-TEMP_SSH_PRIVATE_KEY_FILE='../private_key.pem'
+TEMP_SSH_PRIVATE_KEY_FILE='../id_rsa_github'
 TEMP_SFTP_FILE='../sftp'
 
 # keep string format

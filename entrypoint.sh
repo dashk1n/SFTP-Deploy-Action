@@ -1,7 +1,8 @@
-#!/bin/sh -l
+#!/bin/bash
 
 #set -e at the top of your script will make the script exit with an error whenever an error occurs (and is not explicitly handled)
 set -eu
+set -x
 
 
 TEMP_SSH_PRIVATE_KEY_FILE='../id_rsa_github'

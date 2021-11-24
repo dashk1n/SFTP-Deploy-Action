@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh -l
 
 #set -e at the top of your script will make the script exit with an error whenever an error occurs (and is not explicitly handled)
 set -eu

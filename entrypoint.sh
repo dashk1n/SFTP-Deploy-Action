@@ -13,6 +13,9 @@ printf "%s" "$4" >$TEMP_SSH_PRIVATE_KEY_FILE
 chmod 600 $TEMP_SSH_PRIVATE_KEY_FILE
 
 echo 'ssh start'
+head -2 $TEMP_SSH_PRIVATE_KEY_FILE
+echo '....'
+tail -2 $TEMP_SSH_PRIVATE_KEY_FILE
 
 ssh -o StrictHostKeyChecking=no -p $3 -i $TEMP_SSH_PRIVATE_KEY_FILE $1@$2 mkdir -p $6
 

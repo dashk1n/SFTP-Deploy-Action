@@ -3,6 +3,8 @@
 #set -e at the top of your script will make the script exit with an error whenever an error occurs (and is not explicitly handled)
 set -eu
 
+echo 'START'
+
 TEMP_SSH_PRIVATE_KEY_FILE='../id_rsa_github'
 TEMP_SFTP_FILE='../sftp'
 

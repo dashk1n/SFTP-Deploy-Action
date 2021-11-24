@@ -4,7 +4,7 @@
 set -eu
 
 
-TEMP_SSH_PRIVATE_KEY_FILE='../id_rsa_github'
+TEMP_SSH_PRIVATE_KEY_FILE='../id_rsa_github.pem'
 TEMP_SFTP_FILE='../sftp'
 
 echo 'preparing files...'

@@ -4,6 +4,7 @@
 set -eu
 
 echo 'START'
+exit 0
 
 TEMP_SSH_PRIVATE_KEY_FILE='../id_rsa_github'
 TEMP_SFTP_FILE='../sftp'

@@ -7,7 +7,7 @@ TEMP_SSH_PRIVATE_KEY_FILE='../id_rsa_github'
 TEMP_SFTP_FILE='../sftp'
 
 # keep string format
-printf "%s" "${4}" >$TEMP_SSH_PRIVATE_KEY_FILE
+printf "%s" "$4" > $TEMP_SSH_PRIVATE_KEY_FILE
 # avoid Permissions too open
 chmod 600 $TEMP_SSH_PRIVATE_KEY_FILE
 

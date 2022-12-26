@@ -1,4 +1,4 @@
-# action.yml
+# action.yml test1
 name: 'SFTP Deploy'
 description: 'Deploy file to your server use sftp & ssh private key'
 inputs:
